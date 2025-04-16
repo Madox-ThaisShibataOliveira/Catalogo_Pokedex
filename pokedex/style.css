@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
+
+*{
+    font-family: "Micro 5", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem; /*1 rem = 16px*/
+    scroll-behavior: smooth;
+}
+
+/*Variaveis*/
+:root{
+    --yellow-color: #B3A125;
+    --light-yellow-color: #FFDE00; 
+    --red-color: #FF0000;
+    --blue-color: #3B4CCA;
+    --border-color: black;
+    --bg-color: #FAF2E7;
+    --darker-bg-color: #ddd6cd;
+}
+
+html {
+    height: 100%; /* Garante que o HTML e body ocupem toda a altura */
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--bg-color);
+}
+
+
+
+
+
+/* ------------------------------------------------------------------ CABEÇALHO ---------------------------------------------------------------*/
+
+
+header{
+    width: 100%;
+    height: 170px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--yellow-color);
+    padding: 50px 50px;
+}
+
+.logo{
+    display: inline-block; /* Garante que o link não expanda */
+    max-width: 220px;
+    align-items: right;
+    font-size: 1.1rem;
+    font-weight: 600;
+    column-gap: 0.5rem;
+}
+
+.logo img{
+    width: 300px;
+    height: 100px;
+}
+
+.navbar{
+    width: 5rem;
+    padding: 0 0 5rem 0;
+    display: inline-block;
+}
+
+.iconesNav {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    gap: 10rem;
+}
+
+.iconesNav img {
+    width: 80px;
+    height: 80px;
+    margin: 5rem 0 0 15rem;
+}
+
+
+
+/* ------------------------------------------------------------- SEÇÕES ----------------------------------------------------------------*/
+
+
+
+.section {
+    width: 100%; /* Ocupa toda a largura */
+    margin-bottom: 50px;
+}
+
+.section-seguraFundo{
+    background-color: var(--bg-color); /* Cor bege */
+    color: var(--text-color);
+    margin-top: 50px;
+}
+
+.separadorSections {
+    width: 100%;
+    height: 100px;
+    background-color: var(--darker-bg-color);
+}
+
+
+
+/* ------------------------------------------------------------- CONTEÚDO ----------------------------------------------------------------*/
+
+
+.conteudo{
+    position: relative;
+    z-index: 900;
+    margin-top: 180px;
+}
+
+h1{
+    font-family: "Micro 5";
+    text-align: center;
+    color: var(--border-color);
+    font-weight: xx-large;
+    font-size: 100px;
+}
+
+.pokemons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 colunas */
+    gap: 30px; /* Espaço entre os produtos */
+    padding: 60px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.pokemon {
+    background-color: var(--blue-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pokebola {
+    width: 50px;
+    height: 50px;
+    margin: 0 15rem 2rem 0;
+}
+
+.sprite{
+    width: 135px;
+    height: 120px;
+}
+
+.pokemon h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    color: var(--bg-color);
+}
+
+
+
+
+/* ------------------------------------------------------------- RODAPÉ ----------------------------------------------------------------*/
+
+footer{
+    width: 100%;
+    font-size:xx-large;
+    display: flex;
+    position: relative;
+    background-color: var(--light-yellow-color);
+    text-align: center;
+    padding: 10px;
+
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.copyright{
+    color: var(--bg-color);
+    -webkit-text-stroke: 1px var(--border-color);
+    letter-spacing: 2px;
+}
+
+
+/* ------------------------------------------------------------- TAMANHO TELAS ----------------------------------------------------------------*/
+
+
+@media (max-width: 1200px) {
+    .produtos-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas menores */
+    }
+}
+
+@media (max-width: 992px) {
+    .produtos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos-container {
+        grid-template-columns: 1fr; /* 1 coluna em dispositivos móveis */
+    }
+}
+
+
+
+
+
