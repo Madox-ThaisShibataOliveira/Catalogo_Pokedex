@@ -17,6 +17,7 @@
     --yellow-color: #B3A125;
     --light-yellow-color: #FFDE00; 
     --red-color: #FF0000;
+    --darker-red-color: #B82B23;
     --blue-color: #3B4CCA;
     --border-color: black;
     --bg-color: #FAF2E7;
@@ -51,13 +52,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--yellow-color);
+    background: var(--darker-red-color);
     padding: 50px 50px;
 }
 
 .logo{
     display: inline-block; /* Garante que o link não expanda */
-    max-width: 220px;
+    max-width: 200px;
     align-items: right;
     font-size: 1.1rem;
     font-weight: 600;
@@ -66,7 +67,7 @@ header{
 
 .logo img{
     width: 300px;
-    height: 100px;
+    height: 120px;
 }
 
 .navbar{
@@ -132,7 +133,7 @@ h1{
 
 .pokemons-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 5 colunas */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
     gap: 30px; /* Espaço entre os produtos */
     padding: 60px;
     max-width: 100%;
@@ -145,27 +146,43 @@ h1{
     border: 1px solid var(--border-color);
     border-radius: 8px;
     text-align: center;
+    width: 300px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--bg-color);
+}
+
+.pokemon:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-tituloNome{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .pokebola {
     width: 50px;
     height: 50px;
-    margin: 0 15rem 2rem 0;
-}
-
-.sprite{
-    width: 135px;
-    height: 120px;
+    text-align: left;
+    margin: 0 30px 0 0;
 }
 
 .pokemon h3 {
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
     text-align: right;
-    color: var(--bg-color);
 }
+
+.sprite{
+    width: 140px;
+    height: 145px;
+}
+
+.pokemonNumero{
+    font-size: 30px;
+    text-align: left;
+}
+
 
 
 
@@ -177,7 +194,7 @@ footer{
     font-size:xx-large;
     display: flex;
     position: relative;
-    background-color: var(--light-yellow-color);
+    background-color: var(--darker-red-color);
     text-align: center;
     padding: 10px;
 
