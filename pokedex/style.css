@@ -231,6 +231,149 @@ footer{
 }
 
 
+/* ------------------------------------------------------------- TELAS DOS POKEMONS ----------------------------------------------------------------*/
 
 
+/* Estilos para o card de cada Pokémon */
+.pokemon-card {
+    background-color: var(--blue-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    margin: 15px;
+    width: 350px; 
+    height: 220px; 
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    position: relative; 
+}
 
+.pokemon-botao {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 25px; 
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-tituloNome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.pokebola {
+    width: 25px; 
+    height: 25px; 
+    margin-right: 8px; 
+}
+
+.pokemon-tituloNome h3 {
+    margin: 0;
+    font-size: 30px; 
+    color: #333;
+
+}
+
+.sprite {
+    max-width: 115px;
+    height: auto;
+    margin-bottom: 8px; 
+}
+
+.pokemonNumero {
+    font-size: 35px; 
+    color: #777;
+    margin-top: 8px; 
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 10; 
+}
+
+
+.painel-pokemon {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); 
+    z-index: 11; 
+    text-align: center;
+    width: 90%; 
+    max-width: 500px; 
+}
+
+.painel-pokemon h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8em; 
+    margin-bottom: 15px; 
+}
+
+.painel-pokemon .sprite {
+    max-width: 200px; 
+    margin-bottom: 20px; 
+}
+
+.pokemon-info {
+    text-align: left;
+    margin-bottom: 20px; 
+    font-size: 25px; 
+}
+
+.pokemon-info p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.pokemon-info strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.fechar-painel {
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+    background: none;
+    border: none;
+    font-size: 1.4em; 
+    cursor: pointer;
+    color: #777;
+}
+
+.fechar-painel:hover {
+    color: #333;
+}
+
+
+.pokemons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px; 
+}
