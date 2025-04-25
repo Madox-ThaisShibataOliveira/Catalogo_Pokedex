@@ -1,339 +1,677 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <!--Usado para suportar grande parte dos caracteres, incluindo os
-    especiais-->
     <meta charset="UTF-8">
-
-    <!--Utiliza a versão mais recente do Microsoft Edge-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!--Informa que a largura da janela de vizualização seja igual à
-    largura do dispositivo. Também defini o zoom inicial como 1.0, que
-    serve para exibir o site corretamente em mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Icone da aba-->
     <link rel="icon" href="/pokedex/imagens/pokebola.png" type="image/png">
-    
     <title>Pokedex</title>
-
-    <!--Linkando o CSS-->
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
-        <!--Barra de navegação-->
-        <header>
-
-            <!--Icones de menu-->
-            <a href="pokedex.html" class="logo" target="_blank">
-                <img src="/pokedex/imagens/logoPixel.png" alt="Pokedex">
+    <header>
+        <a href="pokedex.html" class="logo" target="_blank">
+            <img src="/pokedex/imagens/logoPixel.png" alt="Pokedex">
+        </a>
+        <div class="navbar">
+            <a href="pokedex.html" class="iconesNav" target="_blank">
+                <img src="/pokedex/imagens/pokebola.png" alt="Pokedex">
             </a>
+        </div>
+    </header>
 
-            <div class="navbar">
-                <a href="pokedex.html" class="iconesNav" target="_blank">
-                    <img src="/pokedex/imagens/pokebola.png" alt="Pokedex">
-                </a>
-            </div>
-        </header>
+    <div class="conteudo">
+        <div class="section section-seguraFundo">
+            <br><br><br>
+            <h1>HOME</h1>
+        </div>
 
-        <div class="conteudo">
-            
-            <div class="section section-seguraFundo">
-                <br>
-                <br>
-                <br>
+        <div class="separadorSections"></div>
 
-                <h1>HOME</h1>
+        <div class="section section-seguraFundo">
+            <br><br><br>
 
-
-            </div>
-
-
-            <div class="separadorSections"></div>
-
-
-            <div class="section section-seguraFundo">
-
-                <br>
-                <br>
-                <br>
-
-                <div class="pokemons-container">
-                    <!--001-->
-                    <div class="pokemon">
+            <div class="pokemons-container">
+                <!-- 001 -->
+                <div class="pokemon-card">
+                    <button id="bulbasaur-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Bulbasaur</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/bulbasaur">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" class="sprite" alt="Bulbasaur">
-                        </a>
-                        <br>
-                        <br>
-                        <br>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
+                            class="sprite" alt="Bulbasaur">
                         <p class="pokemonNumero">n°001</p>
+                    </button>
+                </div>
+                <div id="overlay-bulbasaur" class="overlay"></div>
+                <div id="painel-bulbasaur" class="painel-pokemon">
+                    <h2>Bulbasaur</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" class="sprite"
+                        alt="Bulbasaur">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Planta/Venenoso</p>
+                        <p><strong>Altura:</strong> 0.7 m</p>
+                        <p><strong>Peso:</strong> 6.9 kg</p>
+                        <p><strong>Descrição:</strong> Bulbasaur pode ser visto cochilando ao sol. A semente em suas
+                            costas cresce absorvendo os raios solares.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="bulbasaur">X</button>
+                </div>
 
-                    <!--002-->
-                    <div class="pokemon">
+                <!-- 002 -->
+                <div class="pokemon-card">
+                    <button id="ivysaur-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Ivysaur</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/ivysaur">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif" class="sprite" alt="Ivysaur">
-                        </a>
-                        <br>
-                        <br>
-                        <br>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif" class="sprite"
+                            alt="Ivysaur">
                         <p class="pokemonNumero">n°002</p>
+                    </button>
+                </div>
+                <div id="overlay-ivysaur" class="overlay"></div>
+                <div id="painel-ivysaur" class="painel-pokemon">
+                    <h2>Ivysaur</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif" class="sprite"
+                        alt="Ivysaur">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Planta/Venenoso</p>
+                        <p><strong>Altura:</strong> 1.0 m</p>
+                        <p><strong>Peso:</strong> 13.0 kg</p>
+                        <p><strong>Descrição:</strong> Ivysaur é um Pokémon do tipo Planta/Veneno que evolui de
+                            Bulbasaur. Ele é conhecido por sua flor rosa que cresce no seu dorso e absorve nutrientes,
+                            emitindo um cheiro agradável quando floresce.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="ivysaur">X</button>
+                </div>
 
-                    <!--003-->
-                    <div class="pokemon">
+                <!-- 003 -->
+                <div class="pokemon-card">
+                    <button id="venusaur-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Venusaur</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/venusaur">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif" class="sprite" alt="Venusaur">
-                        </a>
-                        <br>
-                        <br>
-                        <br>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif" class="sprite"
+                            alt="Venusaur">
                         <p class="pokemonNumero">n°003</p>
+                    </button>
+                </div>
+                <div id="overlay-venusaur" class="overlay"></div>
+                <div id="painel-venusaur" class="painel-pokemon">
+                    <h2>Venusaur</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif" class="sprite"
+                        alt="Venusaur">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Planta/Venenoso</p>
+                        <p><strong>Altura:</strong> 2.0 m</p>
+                        <p><strong>Peso:</strong> 100.0 kg</p>
+                        <p><strong>Descrição:</strong> Há uma grande flor em suas costas. A flor libera um aroma
+                            agradável que acalma as emoções das pessoas.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="venusaur">X</button>
+                </div>
 
-                    <!--004-->
-                    <div class="pokemon">
+                <!-- 004 -->
+                <div class="pokemon-card">
+                    <button id="charmander-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Charmander</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/charmander">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" class="sprite" alt="Charmander">
-                        </a>
-                        <br>
-                        <br>
-                        <br>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif"
+                            class="sprite" alt="Charmander">
                         <p class="pokemonNumero">n°004</p>
+                    </button>
+                </div>
+                <div id="overlay-charmander" class="overlay"></div>
+                <div id="painel-charmander" class="painel-pokemon">
+                    <h2>Charmander</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif" class="sprite"
+                        alt="Charmander">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Fogo</p>
+                        <p><strong>Altura:</strong> 0.6 m</p>
+                        <p><strong>Peso:</strong> 8.5 kg</p>
+                        <p><strong>Descrição:</strong> A chama na ponta de sua cauda indica seu humor. Seus balanços são
+                            um sinal de que Charmander está feliz. Se a chama enfraquecer, ele se sente solitário.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="charmander">X</button>
+                </div>
 
-                    <!--005-->
-                    <div class="pokemon">
+                <!-- 005 -->
+                <div class="pokemon-card">
+                    <button id="charmeleon-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Charmeleon</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/charmeleon">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif" class="sprite" alt="Charmeleon">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif" class="sprite"
+                            alt="Charmeleon">
                         <p class="pokemonNumero">n°005</p>
+                    </button>
+                </div>
+                <div id="overlay-charmeleon" class="overlay"></div>
+                <div id="painel-charmeleon" class="painel-pokemon">
+                    <h2>Charmeleon</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif" class="sprite"
+                        alt="Charmeleon">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Fogo</p>
+                        <p><strong>Altura:</strong> 1.1 m</p>
+                        <p><strong>Peso:</strong> 19.0 kg</p>
+                        <p><strong>Descrição:</strong> Charmeleon impiedosamente derrota seus inimigos com suas garras afiadas.
+                            Se ele encontrar um oponente forte, ele se torna agitado. Neste estado, a chama na ponta de
+                            sua cauda queima com uma cor azul-esbranquiçada.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="charmeleon">X</button>
+                </div>
 
-                    <!--006-->
-                    <div class="pokemon">
+                <!-- 006 -->
+                <div class="pokemon-card">
+                    <button id="charizard-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Charizard</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/charizard">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" class="sprite" alt="Charizard">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" class="sprite"
+                            alt="Charizard">
                         <p class="pokemonNumero">n°006</p>
+                    </button>
+                </div>
+                <div id="overlay-charizard" class="overlay"></div>
+                <div id="painel-charizard" class="painel-pokemon">
+                    <h2>Charizard</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" class="sprite"
+                        alt="Charizard">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Fogo/Voador</p>
+                        <p><strong>Altura:</strong> 1.7 m</p>
+                        <p><strong>Peso:</strong> 90.5 kg</p>
+                        <p><strong>Descrição:</strong> Charizard voa pelo céu em busca de oponentes poderosos. Ele cospe fogo
+                            de alta temperatura que pode derreter qualquer coisa. No entanto, ele nunca direciona sua
+                            respiração de fogo para um oponente mais fraco.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="charizard">X</button>
+                </div>
 
-                    <!--007-->
-                    <div class="pokemon">
+                <!-- 007 -->
+                <div class="pokemon-card">
+                    <button id="squirtle-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Squirtle</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/squirtle">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif" class="sprite" alt="Squirtle">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif" class="sprite"
+                            alt="Squirtle">
                         <p class="pokemonNumero">n°007</p>
+                    </button>
+                </div>
+                <div id="overlay-squirtle" class="overlay"></div>
+                <div id="painel-squirtle" class="painel-pokemon">
+                    <h2>Squirtle</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif" class="sprite"
+                        alt="Squirtle">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Água</p>
+                        <p><strong>Altura:</strong> 0.5 m</p>
+                        <p><strong>Peso:</strong> 9.0 kg</p>
+                        <p><strong>Descrição:</strong> O casco de Squirtle não serve apenas para proteção. A forma
+                            arredondada e as ranhuras em sua superfície ajudam a minimizar a resistência na água,
+                            permitindo que ele nade em alta velocidade.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="squirtle">X</button>
+                </div>
 
-                    <!--008-->
-                    <div class="pokemon">
+                <!-- 008 -->
+                <div class="pokemon-card">
+                    <button id="wartortle-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Wartortle</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/wartortle">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif" class="sprite" alt="Wartortle">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif" class="sprite"
+                            alt="Wartortle">
                         <p class="pokemonNumero">n°008</p>
+                    </button>
+                </div>
+                <div id="overlay-wartortle" class="overlay"></div>
+                <div id="painel-wartortle" class="painel-pokemon">
+                    <h2>Wartortle</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif" class="sprite"
+                        alt="Wartortle">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Água</p>
+                        <p><strong>Altura:</strong> 1.0 m</p>
+                        <p><strong>Peso:</strong> 22.5 kg</p>
+                        <p><strong>Descrição:</strong> Wartortle esconde-se na água para caçar sua presa sorrateiramente.
+                            Para nadar rapidamente, ele move suas orelhas e as usa para manter o equilíbrio.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="wartortle">X</button>
+                </div>
 
-                    <!--009-->
-                    <div class="pokemon">
+                <!-- 009 -->
+                <div class="pokemon-card">
+                    <button id="blastoise-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Blastoise</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/blastoise">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" class="sprite" alt="Blastoise">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" class="sprite"
+                            alt="Blastoise">
                         <p class="pokemonNumero">n°009</p>
+                    </button>
+                </div>
+                <div id="overlay-blastoise" class="overlay"></div>
+                <div id="painel-blastoise" class="painel-pokemon">
+                    <h2>Blastoise</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" class="sprite"
+                        alt="Blastoise">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Água</p>
+                        <p><strong>Altura:</strong> 1.6 m</p>
+                        <p><strong>Peso:</strong> 85.5 kg</p>
+                        <p><strong>Descrição:</strong> Blastoise tem canhões de água que se projetam de seu casco. Os jatos
+                            de água que ele dispara têm poder suficiente para esmagar grandes pedregulhos.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="blastoise">X</button>
+                </div>
 
-                    <!--010-->
-                    <div class="pokemon">
+                <!-- 010 -->
+                <div class="pokemon-card">
+                    <button id="caterpie-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Caterpie</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/caterpie">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/caterpie.gif" class="sprite" alt="Caterpie">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/caterpie.gif" class="sprite"
+                            alt="Caterpie">
                         <p class="pokemonNumero">n°010</p>
+                    </button>
+                </div>
+                <div id="overlay-caterpie" class="overlay"></div>
+                <div id="painel-caterpie" class="painel-pokemon">
+                    <h2>Caterpie</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/caterpie.gif" class="sprite"
+                        alt="Caterpie">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Inseto</p>
+                        <p><strong>Altura:</strong> 0.3 m</p>
+                        <p><strong>Peso:</strong> 2.9 kg</<p><strong>Descrição:</strong> Caterpie tem um apetite voraz. Ele consegue devorar folhas maiores que seu
+                            corpo bem diante de seus olhos.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="caterpie">X</button>
+                </div>
 
-                    <!--011-->
-                    <div class="pokemon">
+                <!-- 011 -->
+                <div class="pokemon-card">
+                    <button id="metapod-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Metapod</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/metapod">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif" class="sprite" alt="Metapod">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif" class="sprite"
+                            alt="Metapod">
                         <p class="pokemonNumero">n°011</p>
+                    </button>
+                </div>
+                <div id="overlay-metapod" class="overlay"></div>
+                <div id="painel-metapod" class="painel-pokemon">
+                    <h2>Metapod</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif" class="sprite"
+                        alt="Metapod">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Inseto</p>
+                        <p><strong>Altura:</strong> 0.7 m</p>
+                        <p><strong>Peso:</strong> 9.9 kg</p>
+                        <p><strong>Descrição:</strong> O interior do corpo deste Pokémon macio está passando por uma
+                            transformação. O revestimento da casca permanece duro enquanto isso.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="metapod">X</button>
+                </div>
 
-                    <!--012-->
-                    <div class="pokemon">
+                <!-- 012 -->
+                <div class="pokemon-card">
+                    <button id="butterfree-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Butterfree</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/butterfree">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree-f.gif" class="sprite" alt="Butterfree">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree-f.gif"
+                            class="sprite" alt="Butterfree">
                         <p class="pokemonNumero">n°012</p>
+                    </button>
+                </div>
+                <div id="overlay-butterfree" class="overlay"></div>
+                <div id="painel-butterfree" class="painel-pokemon">
+                    <h2>Butterfree</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree-f.gif"
+                        class="sprite" alt="Butterfree">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Inseto/Voador</p>
+                        <p><strong>Altura:</strong> 1.1 m</p>
+                        <p><strong>Peso:</strong> 32.0 kg</p>
+                        <p><strong>Descrição:</strong> Butterfree tem um pó altamente venenoso em suas asas. É perigoso
+                            inalar este pó.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="butterfree">X</button>
+                </div>
 
-
-                    <!--013-->
-                    <div class="pokemon">
+                <!-- 013 -->
+                <div class="pokemon-card">
+                    <button id="pidgey-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Pidgey</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/pidgey">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgey.gif" class="sprite" alt="Pidgey">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgey.gif" class="sprite"
+                            alt="Pidgey">
                         <p class="pokemonNumero">n°016</p>
+                    </button>
+                </div>
+                <div id="overlay-pidgey" class="overlay"></div>
+                <div id="painel-pidgey" class="painel-pokemon">
+                    <h2>Pidgey</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgey.gif" class="sprite"
+                        alt="Pidgey">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Normal/Voador</p>
+                        <p><strong>Altura:</strong> 0.3 m</p>
+                        <p><strong>Peso:</strong> 1.8 kg</p>
+                        <p><strong>Descrição:</strong> Pidgey tem um senso de direção extremamente apurado. Ele é capaz de
+                            retornar infalivelmente para seu ninho, não importa o quão longe ele esteja voando em lugares
+                            desconhecidos.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="pidgey">X</button>
+                </div>
 
-                    <!--014-->
-                    <div class="pokemon">
+                <!-- 014 -->
+                <div class="pokemon-card">
+                    <button id="pidgeotto-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Pidgeotto</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/pidgeotto">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeotto.gif" class="sprite" alt="Pidgeotto">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeotto.gif"
+                            class="sprite" alt="Pidgeotto">
                         <p class="pokemonNumero">n°017</p>
+                    </button>
+                </div>
+                <div id="overlay-pidgeotto" class="overlay"></div>
+                <div id="painel-pidgeotto" class="painel-pokemon">
+                    <h2>Pidgeotto</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeotto.gif"
+                        class="sprite" alt="Pidgeotto">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Normal/Voador</p>
+                        <p><strong>Altura:</strong> 1.1 m</p>
+                        <p><strong>Peso:</strong> 30.0 kg</p>
+                        <p><strong>Descrição:</strong> Pidgeotto patrulha seu território extenso. Este Pokémon voa ao redor,
+                            constantemente vigiando por invasores.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="pidgeotto">X</button>
+                </div>
 
-                    <!--015-->
-                    <div class="pokemon">
+                <!-- 015 -->
+                <div class="pokemon-card">
+                    <button id="pidgeot-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Pidgeot</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/pidgeot">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeot.gif" class="sprite" alt="Pidgeot">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeot.gif"
+                            class="sprite" alt="Pidgeot">
                         <p class="pokemonNumero">n°018</p>
+                    </button>
+                </div>
+                <div id="overlay-pidgeot" class="overlay"></div>
+                <div id="painel-pidgeot" class="painel-pokemon">
+                    <h2>Pidgeot</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeot.gif" class="sprite"
+                        alt="Pidgeot">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Normal/Voador</p>
+                        <p><strong>Altura:</strong> 1.5 m</p>
+                        <p><strong>Peso:</strong> 39.5 kg</p>
+                        <p><strong>Descrição:</strong> Este Pokémon voador tem uma plumagem linda e brilhante. Muitas vezes
+                            é reconhecido pela beleza impressionante das penas em sua cabeça.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="pidgeot">X</button>
+                </div>
 
-                    <!--016-->
-                    <div class="pokemon">
+                <!-- 016 -->
+                <div class="pokemon-card">
+                    <button id="pikachu-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Pikachu</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/pikachu">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" class="sprite" alt="Pikachu">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif"
+                            class="sprite" alt="Pikachu">
                         <p class="pokemonNumero">n°025</p>
+                    </button>
+                </div>
+                <div id="overlay-pikachu" class="overlay"></div>
+                <div id="painel-pikachu" class="painel-pokemon">
+                    <h2>Pikachu</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" class="sprite"
+                        alt="Pikachu">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Elétrico</p>
+                        <p><strong>Altura:</strong> 0.4 m</p>
+                        <p><strong>Peso:</strong> 6.0 kg</p>
+                        <p><strong>Descrição:</strong> Quanto mais energia elétrica Pikachu acumula em suas bolsas nas
+                            bochechas, mais rápido ele consegue gerar eletricidade.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="pikachu">X</button>
+                </div>
 
-                    <!--017-->
-                    <div class="pokemon">
+                <!-- 017 -->
+                <div class="pokemon-card">
+                    <button id="raichu-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Raichu</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/raichu">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/raichu.gif" class="sprite" alt="Raichu">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/raichu.gif"
+                            class="sprite" alt="Raichu">
                         <p class="pokemonNumero">n°026</p>
+                    </button>
+                </div>
+                <div id="overlay-raichu" class="overlay"></div>
+                <div id="painel-raichu" class="painel-pokemon">
+                    <h2>Raichu</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/raichu.gif" class="sprite"
+                        alt="Raichu">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Elétrico</p>
+                        <p><strong>Altura:</strong> 0.8 m</p>
+                        <p><strong>Peso:</strong> 30.0 kg</p>
+                        <p><strong>Descrição:</strong> Se as bolsas elétricas nas bochechas de Raichu ficarem
+                            sobrecarregadas, ele descarregará a eletricidade no chão. Perto do local, haverá terrenos
+                            chamuscados.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="raichu">X</button>
+                </div>
 
-                    <!--018-->
-                    <div class="pokemon">
+                <!-- 018 -->
+                <div class="pokemon-card">
+                    <button id="abra-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Abra</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/abra">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/abra.gif" class="sprite" alt="Abra">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/abra.gif" class="sprite"
+                            alt="Abra">
                         <p class="pokemonNumero">n°063</p>
+                    </button>
+                </div>
+                <div id="overlay-abra" class="overlay"></div>
+                <div id="painel-abra" class="painel-pokemon">
+                    <h2>Abra</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/abra.gif" class="sprite"
+                        alt="Abra">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Psíquico</p>
+                        <p><strong>Altura:</strong> 0.9 m</p>
+                        <p><strong>Peso:</strong> 19.5 kg</p>
+                        <p><strong>Descrição:</strong> Abra precisa dormir uma hora por dia. Se ele não o fizer, suas
+                            habilidades psíquicas enfraquecerão.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="abra">X</button>
+                </div>
 
-                    <!--019-->
-                    <div class="pokemon">
+                <!-- 019 -->
+                <div class="pokemon-card">
+                    <button id="kadabra-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Kadabra</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/kadabra">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/kadabra.gif" class="sprite" alt="Kadabra">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/kadabra.gif"
+                            class="sprite" alt="Kadabra">
                         <p class="pokemonNumero">n°064</p>
+                    </button>
+                </div>
+                <div id="overlay-kadabra" class="overlay"></div>
+                <div id="painel-kadabra" class="painel-pokemon">
+                    <h2>Kadabra</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/kadabra.gif" class="sprite"
+                        alt="Kadabra">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Psíquico</p>
+                        <p><strong>Altura:</strong> 1.3 m</p>
+                        <p><strong>Peso:</strong> 56.5 kg</p>
+                        <p><strong>Descrição:</strong> Kadabra segura uma colher de prata na mão. A colher é usada para
+                            amplificar as ondas alfa em seu cérebro.</p>
                     </div>
+                    <button class="fechar-painel" data-pokemon="kadabra">X</button>
+                </div>
 
-                    <!--020-->
-                    <div class="pokemon">
+                <!-- 020 -->
+                <div class="pokemon-card">
+                    <button id="alakazam-btn" class="pokemon-botao">
                         <div class="pokemon-tituloNome">
                             <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
                             <h3>Alakazam</h3>
                         </div>
-                        <a href="https://pokemondb.net/pokedex/alakazam">
-                            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/alakazam.gif" class="sprite" alt="Alakazam">
-                        </a>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/alakazam.gif"
+                            class="sprite" alt="Alakazam">
                         <p class="pokemonNumero">n°065</p>
-                    </div>
-
-
-
+                    </button>
                 </div>
+                
+                <div id="overlay-alakazam" class="overlay"></div>
+                <div id="painel-alakazam" class="painel-pokemon">
+                    <h2>Alakazam</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/alakazam.gif" class="sprite"
+                        alt="Alakazam">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Psíquico</p>
+                        <p><strong>Altura:</strong> 1.5 m</p>
+                        <p><strong>Peso:</strong> 48.0 kg</p>
+                        <p><strong>Descrição:</strong> O cérebro de Alakazam pode superar o de um supercomputador. Seu QI é
+                            de cerca de 5.000.</p>
+                    </div>
+                    <button class="fechar-painel" data-pokemon="alakazam">X</button>
+                </div>
+
+                <!-- 021 -->
+                <div class="pokemon-card">
+                    <button id="gible-btn" class="pokemon-botao">
+                        <div class="pokemon-tituloNome">
+                            <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
+                            <h3>Alakazam</h3>
+                        </div>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/gible.gif"
+                            class="sprite" alt="Gible">
+                        <p class="pokemonNumero">n°443</p>
+                    </button>
+                </div>
+                <div id="overlay-gible" class="overlay"></div>
+                <div id="painel-gible" class="painel-pokemon">
+                    <h2>Gible</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/gible.gif" class="sprite"
+                        alt="Gible">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Dragão/Terra</p>
+                        <p><strong>Altura:</strong> 70 centimentros</p>
+                        <p><strong>Peso:</strong> 20.5 kg</p>
+                        <p><strong>Descrição:</strong> Gible é um pequeno dragão, gordinho com uma grande boca cheia de dentes afiados, sem pescoço e braços que se iniciam nas bordas exteriores de suas mandíbulas. É azul escuro, com uma barriga vermelha que cobre o seu abdômen para o fundo das suas mandíbulas..</p>
+                    </div>
+                    <button class="fechar-painel" data-pokemon="gible">X</button>
+                </div>
+
+                <!-- 022 -->
+                <div class="pokemon-card">
+                    <button id="gabite-btn" class="pokemon-botao">
+                        <div class="pokemon-tituloNome">
+                            <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
+                            <h3>Gabite</h3>
+                        </div>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/gabite.gif"
+                            class="sprite" alt="Alakazam">
+                        <p class="pokemonNumero">n°444</p>
+                    </button>
+                </div>
+                <div id="overlay-gabite" class="overlay"></div>
+                <div id="painel-gabite" class="painel-pokemon">
+                    <h2>Gabite</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/gabite.gif" class="sprite"
+                        alt="Gabite">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Dragão/Terra</p>
+                        <p><strong>Altura:</strong> 1.4 m</p>
+                        <p><strong>Peso:</strong> 56.0 kg</p>
+                        <p><strong>Descrição:</strong> Gabite é um Pokémon azul escuro que tem apêndices que se assemelham a jatos ou aviões, ele possue barbatanas uma em cada braço, uma nas costas, e outra na cauda. Ele tem picos sobre suas patas e garras afiadas..</p>
+                    </div>
+                    <button class="fechar-painel" data-pokemon="gabite">X</button>
+                </div>
+
+                <!-- 023 -->
+                <div class="pokemon-card">
+                    <button id="garchomp-btn" class="pokemon-botao">
+                        <div class="pokemon-tituloNome">
+                            <img src="/pokedex/imagens/pokebola.png" class="pokebola" alt="pokebola-icone">
+                            <h3>Garchomp</h3>
+                        </div>
+                        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/garchomp.gif"
+                            class="sprite" alt="Garchomp">
+                        <p class="pokemonNumero">n°445</p>
+                    </button>
+                </div>
+                <div id="overlay-garchomp" class="overlay"></div>
+                <div id="painel-garchomp" class="painel-pokemon">
+                    <h2>Garchomp</h2>
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/garchomp.gif" class="sprite"
+                        alt="Garchomp">
+                    <div class="pokemon-info">
+                        <p><strong>Tipo:</strong> Dragão/Terra</p>
+                        <p><strong>Altura:</strong> 1.9 m</p>
+                        <p><strong>Peso:</strong> 95.0 kg</p>
+                        <p><strong>Descrição:</strong>Dizem que quando um Garchomp corre em alta velocidade, suas asas criam lâminas de vento que podem cortar várias árvores ao seu redor </p>
+                    </div>
+                    <button class="fechar-painel" data-pokemon="garchomp">X</button>
+                </div>
+
             </div>
-
         </div>
+    </div>
 
 
 
+    <footer>
+        <p class="copyright">COPYRIGHT POKEMON &copy; 2025</p>
+    </footer>
 
-        <footer>
-            <p class="copyright">COPYRIGHT POKEMON &copy; 2025</p>
-        </footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+</body>
 
-        <!--Linkando o JavaScript-->
-        <script src="script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    </body>
 </html>
